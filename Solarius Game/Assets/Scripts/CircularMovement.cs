@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CircularMovement : MonoBehaviour
 {
-    [SerializeField] float speed = 3.0f;  // ...or whatever.
+    [SerializeField] float speed = 3.0f;
+    public Vector2 jumpHeight;
 
     void Update() {
-        
+
 
         if (Input.GetKey("a")) {
             transform.Translate(-Vector3.right * speed * Time.deltaTime);
