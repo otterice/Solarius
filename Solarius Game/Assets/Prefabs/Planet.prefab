@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2211001184201668641}
   - component: {fileID: 2211001184201668642}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Planet
   m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8701ceae6af7ee94da972fabe02287b2, type: 3}
+  m_Sprite: {fileID: -8787826105416186082, guid: 88ac1a56703a1a24c97a0acdc8f93383, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
