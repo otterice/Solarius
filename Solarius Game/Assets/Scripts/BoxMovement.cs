@@ -6,9 +6,10 @@ public class BoxMovement : MonoBehaviour
 {
     public Transform planet;
     private float forceAmountForRotation = 10;
-    private Vector3 directionOfPlanetFromBird;
+    private Vector3 directionOfPlanetFromBox;
     private bool allowForce;
     private Vector2 force;
+    private float gravity = -2.0f;
     Rigidbody2D boxBod;
 
 
@@ -19,7 +20,7 @@ public class BoxMovement : MonoBehaviour
     }
     void Start()
     {
-        directionOfPlanetFromBird = Vector3.zero;
+        directionOfPlanetFromBox = Vector3.zero;
     }
 
     void Update()
@@ -30,15 +31,18 @@ public class BoxMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
             allowForce = true;
 
-        directionOfPlanetFromBird = transform.position - planet.position;
-        transform.right = Vector3.Cross(directionOfPlanetFromBird, Vector3.forward);
+        directionOfPlanetFromBox = transform.position - planet.position;
+        transform.right = Vector3.Cross(directionOfPlanetFromBox, Vector3.forward);
+
+        
     }
 
     void FixedUpdate()
 
     {
         force = transform.right * forceAmountForRotation;
+        boxBod.AddForce(transform.up * gravity);
         if (allowForce)
-            boxBod.AddForce(force);
+        boxBod.AddForce(force);
     }
 }
