@@ -11,21 +11,25 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrounded;
     private float horizontal;
+    private float vertical;
 
     private void Start() {
         body = GetComponent<Rigidbody2D>();
     }
 
     private void Update() {
-        horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
 
         if (Input.GetButtonDown("Jump")) {
-            body.AddForce(transform.up * jump, ForceMode2D.Impulse);
+            body.velocity = new Vector2(body.velocity.x, jump);
+            //body.AddForce(transform.up * jump, ForceMode2D.Impulse);
         }
     }
 
     private void FixedUpdate() {
-        body.AddForce(transform.right * horizontal * moveSpeed); //Mathf.clamp to not overshoot the character
+        body.velocity = new Vector2(horizontal * moveSpeed, body.velocity.y);
+        //body.AddForce(transform.right * horizontal * moveSpeed); //Mathf.clamp to not overshoot the character
     }
 
     private void OnTriggerStay2D(Collider2D collision) {
