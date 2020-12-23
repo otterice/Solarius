@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4541498723452351113}
-  ebulletPrefab: {fileID: 9128164589728610721, guid: ebaa150db7a84c44aa7be0e286c6dbc4, type: 3}
+  eBulletPrefab: {fileID: 9128164589728610721, guid: ebaa150db7a84c44aa7be0e286c6dbc4, type: 3}
   shotCounter: 0
   minTimeBetweenShots: 0
   maxTimeBetweenShots: 0

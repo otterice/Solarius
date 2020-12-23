@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 934936054}
   - component: {fileID: 934936060}
   - component: {fileID: 934936059}
+  - component: {fileID: 5563990832922085967}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -197,3 +198,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5563990832922085967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029505820349259249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116a9b742f193574e9f3e23958ba6480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 0}
+  pBulletPrefab: {fileID: 2162786743148886213, guid: 86ae6334773e77f46af9a02e21ce1c0b, type: 3}

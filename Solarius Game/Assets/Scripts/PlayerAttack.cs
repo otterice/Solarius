@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public Transform firePoint;
     public GameObject pBulletPrefab;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(pBulletPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(pBulletPrefab, transform.position, transform.rotation);
     }
 }
 
