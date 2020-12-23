@@ -11,18 +11,12 @@ public class PBulletScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        
+        PBBod.velocity = transform.right * speed;
     }
+ 
 
-
-
-    public void rotateRB(Rigidbody rb, Vector3 origin, Vector3 axis, float angle)
-    {
-        Quaternion q = Quaternion.AngleAxis(angle, axis);
-        rb.MovePosition(q * (rb.transform.position - origin) + origin);
-        rb.MoveRotation(rb.transform.rotation * q);
-    }
-
+  
 
     private void OnTriggerStay2D(Collider2D hitCollision)
     {
