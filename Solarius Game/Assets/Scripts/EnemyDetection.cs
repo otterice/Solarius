@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyDetection : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject ebulletPrefab;
+    public GameObject eBulletPrefab;
     //Enemy bullet mechanics
     [SerializeField] float shotCounter, minTimeBetweenShots, maxTimeBetweenShots;
 
@@ -24,7 +24,7 @@ public class EnemyDetection : MonoBehaviour
 
     void Attack() 
     {
-        Instantiate(ebulletPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(eBulletPrefab, firePoint.position, firePoint.rotation);
     }
 
     //Utilizes trigger trait of component 
