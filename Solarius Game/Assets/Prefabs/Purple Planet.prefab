@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 2211001184201668640}
   - component: {fileID: 2211001184201668641}
   - component: {fileID: 2211001184201668642}
+  - component: {fileID: 764222705}
   m_Layer: 0
-  m_Name: Planet
+  m_Name: Purple Planet
   m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -8787826105416186082, guid: 88ac1a56703a1a24c97a0acdc8f93383, type: 3}
+  m_Sprite: {fileID: 4195246299684043480, guid: d1fa260b0de07664f92baa7a487645e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.014456749, y: 0}
   serializedVersion: 2
-  m_Radius: 2.45
+  m_Radius: 3.305553
 --- !u!58 &2211001184201668641
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -116,7 +117,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 4.437785
 --- !u!114 &2211001184201668642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,3 +134,22 @@ MonoBehaviour:
   planetRadius: 0
   gravityMinRange: 3
   gravityMaxRange: 10
+--- !u!95 &764222705
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211001184201668645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8430cc9f4dce7c46a072bdc55d2b65c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

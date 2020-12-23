@@ -22,14 +22,14 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
 
         if (Input.GetButtonDown("Jump")) {
-            body.velocity = new Vector2(body.velocity.x, jump);
-            //body.AddForce(transform.up * jump, ForceMode2D.Impulse);
+            //body.velocity = new Vector2(body.velocity.x, jump);
+            body.AddForce(transform.up * jump, ForceMode2D.Impulse);
         }
     }
 
     private void FixedUpdate() {
-        body.velocity = new Vector2(horizontal * moveSpeed, body.velocity.y);
-        //body.AddForce(transform.right * horizontal * moveSpeed); //Mathf.clamp to not overshoot the character
+        //body.velocity = new Vector2(horizontal * moveSpeed, body.velocity.y);
+        body.AddForce(transform.right * horizontal * moveSpeed); //Mathf.clamp to not overshoot the character
     }
 
     private void OnTriggerStay2D(Collider2D collision) {
