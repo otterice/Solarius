@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PBulletScript : MonoBehaviour
 {
-
-
     public float speed = 20f;
     public Rigidbody2D PBBod;
+
+    private void Start() {
+    }
+
     //Calls every fixed framed
     void FixedUpdate()
     {
-        //PBBod.AddForce(transform.right * speed);
         PBBod.velocity = transform.right * speed;
     }
  
@@ -27,6 +28,4 @@ public class PBulletScript : MonoBehaviour
     //        Object.Destroy(gameObject);
     //    }
     //}
-
-
 }
