@@ -32,11 +32,8 @@ public class EnemyDetection : MonoBehaviour
     {
         //Call attack method each time collider is triggered by gameObject player
         if(collision.gameObject.name == "Player")
-        {
-
-        
+        {       
             shotCounter -= Time.deltaTime;
-            Debug.Log(shotCounter);
             if (shotCounter <= 0f)
             {
                 for (int i = 0; i < 3; ++i)
