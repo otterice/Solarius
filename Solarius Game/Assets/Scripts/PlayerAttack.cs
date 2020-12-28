@@ -29,14 +29,20 @@ public class PlayerAttack : MonoBehaviour
     }
 
 
-    void Shoot() {
+    void Shoot()
+    {
+
         GameObject newBullet = Instantiate(pBulletPrefab, transform.position, transform.rotation);
-        if (p.lookingLeft) {
+
+        if (p.lookingLeft)
+        {
+            newBullet.transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.y);
             newBullet.transform.right = -1 * transform.right.normalized;
         }
-        else {
+        else
+        {
+            newBullet.transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.y);
             newBullet.transform.right = transform.right.normalized;
         }
     }
 }
-

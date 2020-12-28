@@ -17,4 +17,15 @@ public class EBulletScript : MonoBehaviour
     {
         EBBod.velocity = transform.right * speed;
     }
+
+    private void OnCollisionEnter(Collider2D hitCollision)
+    {
+        //Conditional still WIP to work with other planets
+        // w/o yandere dev-esque code lolz 
+        if (hitCollision.gameObject.name == "Radius")
+        {
+            Object.Destroy(gameObject);
+            Debug.Log("hit planet");
+        }
+    }
 }
