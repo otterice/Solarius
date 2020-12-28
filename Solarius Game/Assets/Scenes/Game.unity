@@ -160,6 +160,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1719059623, guid: e4ca07dca3405384585e718d4d55ee89, type: 3}
+      propertyPath: stoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4541498723452351113, guid: e4ca07dca3405384585e718d4d55ee89, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -505,19 +509,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4541498723452351118, guid: e4ca07dca3405384585e718d4d55ee89, type: 3}
   m_PrefabInstance: {fileID: 4541498721739912748}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1719059619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719059618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ff19c727dbfed40887ae2fa23631b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.5
 --- !u!1001 &2089184769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -586,6 +577,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1719059623, guid: e4ca07dca3405384585e718d4d55ee89, type: 3}
+      propertyPath: stoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4541498723452351113, guid: e4ca07dca3405384585e718d4d55ee89, type: 3}
       propertyPath: m_RootOrder
       value: 2
