@@ -6,6 +6,7 @@ public class EnemyFollow : MonoBehaviour
 {
     public float speed;
     private Transform target;
+    private Rigidbody2D body;
 
     void Start()
     {
@@ -15,6 +16,6 @@ public class EnemyFollow : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        body.AddForce(Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime));
     }
 }
