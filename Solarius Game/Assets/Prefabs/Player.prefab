@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116a9b742f193574e9f3e23958ba6480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pBulletPrefab: {fileID: 2162786743148886213, guid: 86ae6334773e77f46af9a02e21ce1c0b, type: 3}
+  pBulletPrefab: {fileID: 47296507479671390, guid: e4509bd302cf9d94286eacc73ab51524, type: 3}
 --- !u!114 &460829122
 MonoBehaviour:
   m_ObjectHideFlags: 0
