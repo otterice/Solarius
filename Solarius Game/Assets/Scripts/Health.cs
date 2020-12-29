@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] int health = 100;
+    [SerializeField] public int health = 100;
+    public HealthBar healthBar;
     
 
     // Start is called before the first frame update
@@ -31,6 +32,7 @@ public class Health : MonoBehaviour
     private void processHit(DamageDealer d) {
         //Gets how much damage the collision is doing
         health -= d.getDamage();
+        healthBar.SetHealth(health);
         d.Hit();
         if (health <= 0) {
             Destroy(gameObject);

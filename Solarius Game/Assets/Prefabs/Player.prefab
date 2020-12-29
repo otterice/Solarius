@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &905907752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905907753}
+  m_Layer: 0
+  m_Name: RightFacing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905907753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905907752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2029505820349259248}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1808702858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1808702859}
+  m_Layer: 0
+  m_Name: LeftFacing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1808702859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808702858}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2029505820349259248}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &2029505820349259249
 GameObject:
   m_ObjectHideFlags: 0
@@ -35,7 +95,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.2099, y: 3.2959, z: -10.269954}
   m_LocalScale: {x: 0.31975675, y: 0.2892511, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 905907753}
+  - {fileID: 1808702859}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,8 +140,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 2529328497044360591, guid: 9b225534ee4174b4e85333a59a8113d1, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 8974343518149248677, guid: f3a4579d79008154daf8e2ac0c229803, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,7 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d6d72ee03c8f84a9912f84f67573f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 200
+  healthBar: {fileID: 0}
 --- !u!70 &934936054
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -171,7 +234,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2.4285715}
+    oldSize: {x: 3.2, y: 2.3333333}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -211,7 +274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116a9b742f193574e9f3e23958ba6480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pBulletPrefab: {fileID: 47296507479671390, guid: e4509bd302cf9d94286eacc73ab51524, type: 3}
+  pBulletPrefab: {fileID: 1652916892857692460, guid: a60c81960e677c045a2170baf3b15b51, type: 3}
+  sr: {fileID: 2029505820349259251}
 --- !u!114 &460829122
 MonoBehaviour:
   m_ObjectHideFlags: 0
