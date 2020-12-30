@@ -18,7 +18,7 @@ public class EBulletScript : MonoBehaviour
         EBBod.velocity = transform.right * speed;
     }
 
-    private void OnCollisionEnter(Collider2D hitCollision)
+    private void OnCollisionEnter2D(Collision2D hitCollision)
     {
         //Conditional still WIP to work with other planets
         // w/o yandere dev-esque code lolz 

@@ -6,13 +6,14 @@ public class EnemyDetection : MonoBehaviour
 {
 
     public GameObject eBulletPrefab;
+    private GameObject Right;
     //Enemy bullet mechanics
     [SerializeField] float shotCounter, minTimeBetweenShots, maxTimeBetweenShots;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Right = GameObject.Find("Right");
 
     }
 
@@ -24,7 +25,10 @@ public class EnemyDetection : MonoBehaviour
 
     void Attack() 
     {
-        Instantiate(eBulletPrefab, transform.position, transform.rotation);
+        GameObject eBullet = Instantiate(eBulletPrefab, transform.position, transform.rotation);
+        eBullet.transform.position = Right.transform.position;
+        eBullet.transform.right = transform.right.normalized;
+
     }
 
     //Utilizes trigger trait of component 
@@ -36,12 +40,9 @@ public class EnemyDetection : MonoBehaviour
             shotCounter -= Time.deltaTime;
             if (shotCounter <= 0f)
             {
-                for (int i = 0; i < 3; ++i)
-                {
-                    Attack();
-                }
+                Attack();
 
-                shotCounter = 3f;
+                shotCounter = 1f;
             
             }
 
