@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
         p = GetComponent<playerStates>();
         leftFace = GameObject.Find("LeftFacing");
         rightFace = GameObject.Find("RightFacing");
-        p.lookingLeft = true;
+        p.lookingLeft = false;
     }
 
     // Update is called once per frame
