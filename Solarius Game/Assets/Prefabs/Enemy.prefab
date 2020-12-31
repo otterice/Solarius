@@ -76,7 +76,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0078089237, y: 0.024285167}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -87,7 +87,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.60955656, y: 0.58229584}
   m_EdgeRadius: 0
 --- !u!50 &1372953758702676153
 Rigidbody2D:
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 150
-  hboxCollider: {fileID: 0}
+  time: 0.05
 --- !u!1 &3385488631810873454
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 1296208759135628869}
   - component: {fileID: 1296208759135628874}
   - component: {fileID: 1296208759135628875}
+  - component: {fileID: 2013422757}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -156,7 +157,7 @@ Transform:
   m_GameObject: {fileID: 3385488631810873454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.9, y: 5.49, z: 0}
-  m_LocalScale: {x: 1.2342346, y: 0.9921689, z: 1}
+  m_LocalScale: {x: 1.2342347, y: 0.9921689, z: 1}
   m_Children:
   - {fileID: 1372953758434003734}
   - {fileID: 1372953758702676155}
@@ -203,7 +204,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: b4851f617173b434089f294135ce3205, type: 3}
+  m_Sprite: {fileID: 3480502962889191228, guid: a0dfb34a186ca7d40a5d2a65c0ae67f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -229,7 +230,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.013385941, y: -0.06625002}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 4
 --- !u!114 &3385488631810873450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +244,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MissilePrefab: {fileID: 4764862031426533990, guid: 673961a6a971da645b50e517e73bc503, type: 3}
+  self: {fileID: 0}
+  playerTransform: {fileID: 0}
+  rotateSpeed: 200
   shotCounter: 0
   minTimeBetweenShots: 0
   maxTimeBetweenShots: 0
@@ -345,3 +349,22 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!95 &2013422757
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385488631810873454}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc2ee4313db852544819ea30ce1e10f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
