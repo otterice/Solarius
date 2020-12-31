@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548837003a9fd364b8b9be983e823c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eBulletPrefab: {fileID: 9128164589728610721, guid: ebaa150db7a84c44aa7be0e286c6dbc4, type: 3}
+  MissilePrefab: {fileID: 4764862031426533990, guid: 673961a6a971da645b50e517e73bc503, type: 3}
   shotCounter: 0
   minTimeBetweenShots: 0
   maxTimeBetweenShots: 0

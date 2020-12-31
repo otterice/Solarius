@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    
-
     [SerializeField] public int enemyHealth = 150;
-    private GameObject hurtbox;
+    [SerializeField] float time = 0.05f;
+    private Renderer sr;
+    private IEnumerator coroutine;
 
-    public BoxCollider2D hboxCollider;
-    // Start is called before the first frame update
-    void Start()
-    {
-        hboxCollider = GetComponent<BoxCollider2D>();
+
+    private void Start() {
+        sr = GetComponentInParent<Renderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
-        if(!damageDealer)
+        if (!damageDealer)
         {
             return;
         } 
@@ -39,6 +37,16 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(transform.parent.gameObject);
         }
+        StartCoroutine(flash());
     }
 
+    //when enemy is hit, flash the sprite
+    private IEnumerator flash() {
+        for (int i = 0; i < 2; i++) {
+            sr.enabled = false;
+            yield return new WaitForSeconds(time);
+            sr.enabled = true;
+            yield return new WaitForSeconds(time);
+        }
+    }
 }

@@ -5,19 +5,18 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] public int health = 100;
+    [SerializeField] float time = 0.05f;
+
     public HealthBar healthBar;
-    
+
+    private Renderer sr;
+    private IEnumerator coroutine;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        sr = GetComponent<Renderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -37,6 +36,16 @@ public class Health : MonoBehaviour
         if (health <= 0) {
             Destroy(gameObject);
         }
+        StartCoroutine(flash());
     }
 
+    //when enemy is hit, flash the sprite
+    private IEnumerator flash() {
+        for (int i = 0; i < 2; i++) {
+            sr.enabled = false;
+            yield return new WaitForSeconds(time);
+            sr.enabled = true;
+            yield return new WaitForSeconds(time);
+        }
+    }
 }
