@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Planet
   - Hurtbox
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -13,31 +13,20 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hurtbox = GameObject.Find("Hurtbox");
+        hboxCollider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
         if(!damageDealer)
         {
             return;
         } 
-        else if (collision.gameObject.tag == "Hurtbox")
+        else if (collision.gameObject.tag == "Bullet")
         {
-            
             processHit(damageDealer);
         }
-       
-
     }
 
     private void processHit(DamageDealer d)
@@ -47,7 +36,7 @@ public class EnemyHealth : MonoBehaviour
         d.Hit();
         if (enemyHealth <= 0)
         {
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 
