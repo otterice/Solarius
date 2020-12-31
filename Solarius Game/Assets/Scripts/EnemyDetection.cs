@@ -41,7 +41,7 @@ public class EnemyDetection : MonoBehaviour
             {
                 Attack();
 
-                shotCounter = 1f;
+                shotCounter = 3f;
             
             }
 

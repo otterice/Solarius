@@ -17,11 +17,13 @@ public class HomingMissile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        target = GameObject.Find("Player").transform;
+
     }
 
     void FixedUpdate() //use fixedUpdate to mess around with physics
     {
-        Vector2 direction = (Vector2) target.position - rb.position;
+        Vector2 direction = (Vector2)target.position - rb.position;
 
         direction.Normalize();
 
