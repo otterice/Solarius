@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyDetection : MonoBehaviour
 {
 
-    public GameObject eBulletPrefab;
+    public GameObject MissilePrefab;
     private GameObject Right;
     //Enemy bullet mechanics
     [SerializeField] float shotCounter, minTimeBetweenShots, maxTimeBetweenShots;
@@ -25,9 +25,8 @@ public class EnemyDetection : MonoBehaviour
 
     void Attack() 
     {
-        GameObject eBullet = Instantiate(eBulletPrefab, transform.position, transform.rotation);
-        eBullet.transform.position = Right.transform.position;
-        eBullet.transform.right = transform.right.normalized;
+        GameObject missile = Instantiate(MissilePrefab, transform.position, transform.rotation);
+       
 
     }
 
