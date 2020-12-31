@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class EnemyDetection : MonoBehaviour
 {
-
     public GameObject MissilePrefab;
     private GameObject Right;
+
+    public Rigidbody2D self;
+
+    public Transform playerTransform;
+
+    public float rotateSpeed = 200f;
+
     //Enemy bullet mechanics
     [SerializeField] float shotCounter, minTimeBetweenShots, maxTimeBetweenShots;
 
@@ -14,13 +20,21 @@ public class EnemyDetection : MonoBehaviour
     void Start()
     {
         Right = GameObject.Find("Right");
-
+        self = GetComponent<Rigidbody2D>();
+        playerTransform = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        //Put this code in its own script DIRECT COPY FROM HOMING MISSILE
+        //THIS IS HOW YOU REUSE CODE GUYS!!!!!! 
+        Vector2 direction = (Vector2)playerTransform.position - self.position;
+        direction.Normalize();
+        float rotateAmount = Vector3.Cross(direction, transform.up).z;
+        self.angularVelocity = rotateAmount * rotateSpeed;
+
+
     }
 
     void Attack() 

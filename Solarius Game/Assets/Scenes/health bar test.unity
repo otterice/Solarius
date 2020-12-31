@@ -1189,6 +1189,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531535068}
   m_CullTransparentMesh: 1
+--- !u!1 &1620759668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2029505820349259249, guid: d0b8c328bcceaa44e8728ac785a51c76, type: 3}
+  m_PrefabInstance: {fileID: 1991896994}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1659148365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,6 +1820,22 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 694794079}
+    - target: {fileID: 1372953758702676154, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.60955656
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372953758702676154, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.58229584
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372953758702676154, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0078089237
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372953758702676154, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.024285167
+      objectReference: {fileID: 0}
     - target: {fileID: 3385488631810873448, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1891,6 +1912,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3385488631810873450, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1620759668}
     - target: {fileID: 3385488631810873454, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
       propertyPath: m_Name
       value: Enemy
