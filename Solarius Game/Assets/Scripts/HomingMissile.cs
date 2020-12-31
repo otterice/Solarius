@@ -31,11 +31,4 @@ public class HomingMissile : MonoBehaviour
 
         rb.velocity = transform.up * speed; 
     }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        //Instantiate(explosionVFX, transform.position, transform.rotation);
-        if (collision.GetType() == typeof(BoxCollider2D)) {
-            Destroy(gameObject);
-        }
-    }
 }

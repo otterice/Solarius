@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7621360933565375302}
   - component: {fileID: 7621360933565375301}
   - component: {fileID: 7621360933565375297}
+  - component: {fileID: 4958709511217442315}
   m_Layer: 0
   m_Name: Missile
-  m_TagString: Untagged
+  m_TagString: enemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,3 +367,16 @@ PolygonCollider2D:
       - {x: 0.043945316, y: -14.560548}
       - {x: 0.08789063, y: -14.428712}
       - {x: 0.13183595, y: -14.252931}
+--- !u!114 &4958709511217442315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7621360933565375300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cefba3600a35e241b5d79c4791c435b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50

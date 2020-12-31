@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Planet
   - Hurtbox
+  - playerBullet
+  - enemyBullet
   - Bullet
   layers:
   - Default

@@ -23,8 +23,9 @@ public class EnemyHealth : MonoBehaviour
         {
             return;
         } 
-        else if (collision.gameObject.tag == "Bullet")
+        else if (collision.gameObject.tag == "playerBullet")
         {
+            Debug.Log(collision.gameObject.tag);
             processHit(damageDealer);
         }
     }
