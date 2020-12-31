@@ -33,4 +33,14 @@ public class HomingMissile : MonoBehaviour
 
         rb.velocity = transform.up * speed; 
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       if(collision.gameObject.tag == "playerBullet")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+    }
 }
