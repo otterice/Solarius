@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 409727317}
   - component: {fileID: 409727318}
   m_Layer: 7
-  m_Name: Purple Planet
+  m_Name: purplePlanet
   m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,8 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43de09150af39d42b92af60f52dc063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planets: []
   redPlanetState: 0
   earthState: 0
   purplePlanetState: 0
-  awesome: 0

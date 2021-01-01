@@ -8,10 +8,12 @@ public class EnemyDriller : MonoBehaviour
     private Waypoints Wpoints;
     private Animator anim;
     private bool finishedAnimation;
-
+    private string planetName;
     private int waypointIndex;
-
     private float damage;
+
+    GameObject planet;
+    planetHealth pHP;
 
     void Start()
     {
@@ -20,18 +22,25 @@ public class EnemyDriller : MonoBehaviour
 
         int RNG = Random.Range(1, 4);
 
+        //From the RNG, set the waypoints and the name of the planet
         if (RNG == 1)
         {
             Wpoints = GameObject.FindGameObjectWithTag("WayPointPurple").GetComponent<Waypoints>();
+            planetName = "purplePlanet";
         }
         else if (RNG == 2)
         {
             Wpoints = GameObject.FindGameObjectWithTag("WayPointRed").GetComponent<Waypoints>();
+            planetName = "redPlanet";
         }
         else
         {
             Wpoints = GameObject.FindGameObjectWithTag("WayPointEarth").GetComponent<Waypoints>();
+            planetName = "earth";
         }
+
+        planet = GameObject.Find(planetName);
+        pHP = planet.GetComponent<planetHealth>();
     }
 
     private IEnumerator waitForAnimation() {
@@ -65,10 +74,11 @@ public class EnemyDriller : MonoBehaviour
         }
     }
 
+    //Deals damage to the planet
     void DamageDealer()
     {
         damage = 0.004f;
-        GameObject.FindWithTag("Planet").GetComponent<planetHealth>().TakeDamage(damage);
+        pHP.TakeDamage(damage);
     }
 
 }
