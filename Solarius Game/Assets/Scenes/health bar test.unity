@@ -254,6 +254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43de09150af39d42b92af60f52dc063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planets: []
+  redPlanetState: 0
+  earthState: 0
+  purplePlanetState: 0
+  awesome: 0
 --- !u!1 &480808942
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,7 +920,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1458092414
 MonoBehaviour:
@@ -1158,6 +1163,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43de09150af39d42b92af60f52dc063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planets:
+  - {fileID: 409727311}
+  redPlanetState: 0
+  earthState: 0
+  purplePlanetState: 0
+  awesome: 0
 --- !u!1 &1659148365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,7 +1459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2029505820349259248, guid: d0b8c328bcceaa44e8728ac785a51c76, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2029505820349259248, guid: d0b8c328bcceaa44e8728ac785a51c76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1514,7 +1525,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3786295656050823089, guid: e044d2269d23394428cc0f4d9eb6a61e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3786295656050823089, guid: e044d2269d23394428cc0f4d9eb6a61e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1650,7 +1661,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1710435018485118824, guid: b65b5c88f0fb64741b0b9f8ef6bde87c, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1710435018485118824, guid: b65b5c88f0fb64741b0b9f8ef6bde87c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1694,7 +1705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1710435018485118830, guid: b65b5c88f0fb64741b0b9f8ef6bde87c, type: 3}
       propertyPath: m_Name
-      value: Purple Planet
+      value: purplePlanet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b65b5c88f0fb64741b0b9f8ef6bde87c, type: 3}
@@ -1711,7 +1722,7 @@ PrefabInstance:
       objectReference: {fileID: 694794079}
     - target: {fileID: 3385488631810873449, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3385488631810873449, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1763,7 +1774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3385488631810873454, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9adfe2b1fcc470f4aad051a074eb389c, type: 3}
@@ -1890,11 +1901,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1922862250758516719, guid: 643ee4571631b7b48903e0b85c866479, type: 3}
       propertyPath: m_Name
-      value: Red Planet
+      value: redPlanet
       objectReference: {fileID: 0}
     - target: {fileID: 5471046494437010998, guid: 643ee4571631b7b48903e0b85c866479, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5471046494437010998, guid: 643ee4571631b7b48903e0b85c866479, type: 3}
       propertyPath: m_LocalPosition.x
