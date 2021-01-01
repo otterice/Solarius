@@ -9,6 +9,9 @@ TagManager:
   - playerBullet
   - enemyBullet
   - Bullet
+  - WayPointPurple
+  - WayPointRed
+  - WayPointEarth
   layers:
   - Default
   - TransparentFX

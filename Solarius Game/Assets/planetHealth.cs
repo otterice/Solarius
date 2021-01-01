@@ -8,7 +8,7 @@ public class planetHealth : MonoBehaviour {
 
     private string planetName;
 
-    [SerializeField] int health = 100;
+    [SerializeField] float health = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class planetHealth : MonoBehaviour {
         planetDestroyed();
     }
 
-    public int getHealth() {
+    public float getHealth() {
         return health;
     }
 
@@ -34,6 +34,11 @@ public class planetHealth : MonoBehaviour {
         if (health <= 0) {
             Destroy(gameObject);
         }
+    }
+
+    public void TakeDamage(float amount)
+    {
+        health -= amount;
     }
 
     private void OnDestroy() {
