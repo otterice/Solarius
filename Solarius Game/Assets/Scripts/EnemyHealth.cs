@@ -36,6 +36,15 @@ public class EnemyHealth : MonoBehaviour
         if (enemyHealth <= 0)
         {
             Destroy(transform.parent.gameObject);
+            if (transform.parent.gameObject.name == "Driller")
+            {
+                ScoreCounter.scoreValue += 25;
+            } 
+            else
+            {
+                ScoreCounter.scoreValue += 10;
+
+            }
         }
         StartCoroutine(flash());
     }
