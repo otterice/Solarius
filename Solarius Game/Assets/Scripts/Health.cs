@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] public int health = 100;
     [SerializeField] float time = 0.05f;
+    [SerializeField] GameObject prefabVFX;
 
     public HealthBar healthBar;
 
@@ -33,8 +34,10 @@ public class Health : MonoBehaviour
         health -= d.getDamage();
         healthBar.SetHealth(health);
         d.Hit();
-        if (health <= 0) {
+        if (health <= 0) {            
             Destroy(gameObject);
+            GameObject death = Instantiate(prefabVFX, transform.position, transform.rotation);
+            Destroy(death, 0.5f);
         }
         StartCoroutine(flash());
     }

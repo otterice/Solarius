@@ -336,8 +336,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d6d72ee03c8f84a9912f84f67573f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 50
   time: 0.05
+  prefabVFX: {fileID: 1425451044753128301, guid: aba93ce7b31c0ed4db0fbd26394bf799, type: 3}
   healthBar: {fileID: 0}
 --- !u!70 &934936054
 CapsuleCollider2D:
