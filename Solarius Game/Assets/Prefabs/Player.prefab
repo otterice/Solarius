@@ -277,6 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pBulletPrefab: {fileID: 1652916892857692460, guid: a60c81960e677c045a2170baf3b15b51, type: 3}
+  pBiggerBulletPrefab: {fileID: 1652916892857692460, guid: cac8950991c03f542b43ab87c66372c3, type: 3}
   sr: {fileID: 2029505820349259251}
 --- !u!114 &460829122
 MonoBehaviour:

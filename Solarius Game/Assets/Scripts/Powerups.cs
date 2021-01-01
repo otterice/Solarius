@@ -23,8 +23,11 @@ public class Powerups : MonoBehaviour
         if (planetName == "purplePlanet") {
             purplePlanetState = false;
         }
+        else if (planetName == "redPlanet") {
+            redPlanetState = false;
+        }
+        else if (planetName == "earth") {
+            earthState = false;
+        }
     }
-
-
-
 }

@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     playerStates p; 
 
     public GameObject pBulletPrefab;
+    public GameObject pBiggerBulletPrefab;
 
     private GameObject leftFace;
     private GameObject rightFace;
@@ -45,8 +46,15 @@ public class PlayerAttack : MonoBehaviour
 
 
     void Shoot()
-    {      
-        GameObject newBullet = Instantiate(pBulletPrefab, transform.position, transform.rotation);
+    {
+        GameObject newBullet;
+        if (!powerups.redPlanetState) {
+            newBullet = Instantiate(pBulletPrefab, transform.position, transform.rotation);
+        }
+        else {
+            newBullet = Instantiate(pBiggerBulletPrefab, transform.position, transform.rotation);
+        }
+
         if (p.lookingLeft)
         {
             //Finds the GameObject "RightFacing", under the parent of Player
