@@ -7,8 +7,12 @@ public class PlayerAttack : MonoBehaviour
     playerStates p; 
 
     public GameObject pBulletPrefab;
+
     private GameObject leftFace;
     private GameObject rightFace;
+    private GameObject player;
+    private Powerups powerups;
+
     public SpriteRenderer sr; 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +22,8 @@ public class PlayerAttack : MonoBehaviour
         leftFace = GameObject.Find("LeftFacing");
         rightFace = GameObject.Find("RightFacing");
         p.lookingLeft = false;
+        player = GameObject.Find("Player");
+        powerups = player.GetComponent<Powerups>();
     }
 
     // Update is called once per frame
@@ -33,13 +39,13 @@ public class PlayerAttack : MonoBehaviour
         }
         if (Input.GetKeyDown("f")) {
             Shoot();
+            TriShot();
         }
     }
 
 
     void Shoot()
-    {
-
+    {      
         GameObject newBullet = Instantiate(pBulletPrefab, transform.position, transform.rotation);
         if (p.lookingLeft)
         {
@@ -53,5 +59,35 @@ public class PlayerAttack : MonoBehaviour
             newBullet.transform.position = rightFace.transform.position;
             newBullet.transform.right = transform.right.normalized;
         }
+        
+    }
+
+    void TriShot() {
+        if (powerups.purplePlanetState) {
+            GameObject newBullet2 = Instantiate(pBulletPrefab, transform.position, transform.rotation);
+            GameObject newBullet3 = Instantiate(pBulletPrefab, transform.position, transform.rotation);
+
+
+            if (p.lookingLeft) {
+
+                newBullet2.transform.position = leftFace.transform.position;
+                newBullet2.transform.right = -1 * transform.right.normalized;
+                newBullet2.transform.rotation *= Quaternion.Euler(0, 0, 30);
+
+                newBullet3.transform.position = leftFace.transform.position;
+                newBullet3.transform.right = -1 * transform.right.normalized;
+                newBullet3.transform.rotation *= Quaternion.Euler(0, 0, -30);
+            }
+
+            else {
+                newBullet2.transform.position = rightFace.transform.position;
+                newBullet2.transform.right = transform.right.normalized;
+                newBullet2.transform.rotation *= Quaternion.Euler(0, 0, 30);
+
+                newBullet3.transform.position = rightFace.transform.position;
+                newBullet3.transform.right = transform.right.normalized;
+                newBullet3.transform.rotation *= Quaternion.Euler(0, 0, -30);
+            }
+        }         
     }
 }
