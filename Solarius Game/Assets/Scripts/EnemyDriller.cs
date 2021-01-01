@@ -6,6 +6,8 @@ public class EnemyDriller : MonoBehaviour
 {
     public float speed;
     private Waypoints Wpoints;
+    private Animator anim;
+    private bool finishedAnimation;
 
     private int waypointIndex;
 
@@ -13,6 +15,9 @@ public class EnemyDriller : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
+        finishedAnimation = false;
+
         int RNG = Random.Range(1, 4);
 
         if (RNG == 1)
@@ -29,6 +34,15 @@ public class EnemyDriller : MonoBehaviour
         }
     }
 
+    private IEnumerator waitForAnimation() {
+        anim.SetBool("isGettingDrillOut", true);
+        //This doesnt get the 'exact' length of the animation
+        //idk how to do it haha, search it up later...
+        yield return new WaitForSeconds(1.5f);
+        anim.SetBool("isGettingDrillOut", false);
+        finishedAnimation = true;
+    }
+
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, Wpoints.waypoints[waypointIndex].position, speed * Time.deltaTime);
@@ -41,6 +55,10 @@ public class EnemyDriller : MonoBehaviour
             }
             else
             {
+                if (finishedAnimation == false) {
+                    anim.SetBool("isFlying", false);
+                    StartCoroutine(waitForAnimation());
+                }
                 DamageDealer();
                 //Make the enemy do something after the planet is gone
             }
