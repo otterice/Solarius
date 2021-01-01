@@ -45,6 +45,7 @@ public class PlayerAttack : MonoBehaviour
     }
 
 
+    //Big red funny bullet
     void Shoot()
     {
         GameObject newBullet;
@@ -70,6 +71,7 @@ public class PlayerAttack : MonoBehaviour
         
     }
 
+    //Hilarious triple shot
     void TriShot() {
         if (powerups.purplePlanetState) {
             GameObject newBullet2 = Instantiate(pBulletPrefab, transform.position, transform.rotation);

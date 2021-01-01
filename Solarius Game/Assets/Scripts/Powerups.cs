@@ -15,7 +15,30 @@ public class Powerups : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        redPlanetState = earthState = purplePlanetState = true;
+       
+
+    }
+
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //Reset each state to false to prepare for next planet jump
+        redPlanetState = false;
+        earthState = false;
+        purplePlanetState = false;
+
+        if(collision.gameObject.name == "purplePlanet")
+        {
+            purplePlanetState = true;
+        }
+        else if(collision.gameObject.name == "redPlanet")
+        {
+            redPlanetState = true;
+        }
+        else if(collision.gameObject.name == "earth")
+        {
+            earthState = true;
+        }
 
     }
 
