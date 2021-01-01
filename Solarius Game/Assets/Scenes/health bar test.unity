@@ -229,36 +229,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1710435018485118830, guid: b65b5c88f0fb64741b0b9f8ef6bde87c, type: 3}
   m_PrefabInstance: {fileID: 654044812747931588}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &409727317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409727311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081e5fae69f2ae14d80633ffaf6cb932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
---- !u!114 &409727318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409727311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43de09150af39d42b92af60f52dc063, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planets: []
-  redPlanetState: 0
-  earthState: 0
-  purplePlanetState: 0
-  awesome: 0
 --- !u!1 &480808942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,7 +1801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4553227851112723068, guid: ef2473c2ac3fb294d9796092b77e36ff, type: 3}
       propertyPath: m_Name
-      value: Earth
+      value: earth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef2473c2ac3fb294d9796092b77e36ff, type: 3}

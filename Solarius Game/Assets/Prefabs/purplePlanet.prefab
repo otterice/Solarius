@@ -82,6 +82,8 @@ GameObject:
   - component: {fileID: 1710435018485118826}
   - component: {fileID: 1710435018485118825}
   - component: {fileID: 654044812629136314}
+  - component: {fileID: 409727317}
+  - component: {fileID: 409727318}
   m_Layer: 7
   m_Name: Purple Planet
   m_TagString: Planet
@@ -206,3 +208,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &409727317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710435018485118830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081e5fae69f2ae14d80633ffaf6cb932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &409727318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710435018485118830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43de09150af39d42b92af60f52dc063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planets: []
+  redPlanetState: 0
+  earthState: 0
+  purplePlanetState: 0
+  awesome: 0
