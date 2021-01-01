@@ -54,7 +54,7 @@ public class EnemyDetection : MonoBehaviour
             if (shotCounter <= 0f)
             {
                 Attack();
-
+                SoundScript.PlaySound("enemy_shoot");
                 shotCounter = 3f;
             
             }

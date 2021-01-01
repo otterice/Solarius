@@ -33,8 +33,10 @@ public class Health : MonoBehaviour
         //Gets how much damage the collision is doing
         health -= d.getDamage();
         healthBar.SetHealth(health);
+        SoundScript.PlaySound("player_hurt");
         d.Hit();
-        if (health <= 0) {            
+        if (health <= 0) {
+            SoundScript.PlaySound("player_explode");
             Destroy(gameObject);
             GameObject death = Instantiate(prefabVFX, transform.position, transform.rotation);
             Destroy(death, 0.5f);

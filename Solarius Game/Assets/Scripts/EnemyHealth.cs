@@ -36,6 +36,7 @@ public class EnemyHealth : MonoBehaviour
         if (enemyHealth <= 0)
         {
             Destroy(transform.parent.gameObject);
+            SoundScript.PlaySound("enemy_explode");
             if (transform.parent.gameObject.name == "Driller")
             {
                 ScoreCounter.scoreValue += 25;

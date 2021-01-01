@@ -41,6 +41,8 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetKeyDown("f")) {
             Shoot();
             TriShot();
+            SoundScript.PlaySound("player_shoot");
+
         }
     }
 

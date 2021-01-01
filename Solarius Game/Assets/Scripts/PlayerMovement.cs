@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump")) {
             //body.velocity = new Vector2(body.velocity.x, jump);
             body.AddForce(transform.up * jump, ForceMode2D.Impulse);
+            SoundScript.PlaySound("player_jump");
+            Debug.Log("jump");
         }
     }
 

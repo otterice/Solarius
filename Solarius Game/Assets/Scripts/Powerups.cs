@@ -40,6 +40,7 @@ public class Powerups : MonoBehaviour
         {
             resetStates();
             earthState = true;
+            SoundScript.PlaySound("player_shield");
         }
         else {
             return;
