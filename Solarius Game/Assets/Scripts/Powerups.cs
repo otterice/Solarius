@@ -7,6 +7,7 @@ public class Powerups : MonoBehaviour
     public bool redPlanetState;
     public bool earthState;
     public bool purplePlanetState;
+    public bool orangePlanetState;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class Powerups : MonoBehaviour
         redPlanetState = false;
         earthState = false;
         purplePlanetState = false;
+        orangePlanetState = false;
     }
 
 
@@ -42,6 +44,10 @@ public class Powerups : MonoBehaviour
             earthState = true;
             SoundScript.PlaySound("player_shield");
         }
+        else if (collision.gameObject.name == "orangePlanet") {
+            resetStates();
+            orangePlanetState = true;
+        }
         else {
             return;
         }
@@ -57,6 +63,9 @@ public class Powerups : MonoBehaviour
         }
         else if (planetName == "earth") {
             earthState = false;
+        }
+        else if (planetName == "orangePlanet") {
+            orangePlanetState = false;
         }
     }
 }

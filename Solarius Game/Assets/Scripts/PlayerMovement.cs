@@ -12,9 +12,13 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private float horizontal;
     private float vertical;
+    private Powerups powerups;
+    private GameObject player;
 
     private void Start() {
         body = GetComponent<Rigidbody2D>();
+        player = GameObject.Find("Player");
+        powerups = player.GetComponent<Powerups>();
     }
 
     private void Update() {
@@ -22,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
 
         if (Input.GetButtonDown("Jump")) {
-            //body.velocity = new Vector2(body.velocity.x, jump);
             body.AddForce(transform.up * jump, ForceMode2D.Impulse);
             SoundScript.PlaySound("player_jump");
             Debug.Log("jump");
@@ -30,7 +33,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        //body.velocity = new Vector2(horizontal * moveSpeed, body.velocity.y);
+        if (powerups.orangePlanetState == true) {
+            body.AddForce(transform.right * horizontal * (moveSpeed + 3));
+            return;
+        }
         body.AddForce(transform.right * horizontal * moveSpeed); //Mathf.clamp to not overshoot the character
     }
 
