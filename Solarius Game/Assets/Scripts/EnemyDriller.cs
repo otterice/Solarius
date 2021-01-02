@@ -11,6 +11,7 @@ public class EnemyDriller : MonoBehaviour
     private string planetName;
     private int waypointIndex;
     private float damage;
+    bool stop = true;
 
     GameObject planet;
     planetHealth pHP;
@@ -20,7 +21,7 @@ public class EnemyDriller : MonoBehaviour
         anim = GetComponent<Animator>();
         finishedAnimation = false;
 
-        int RNG = Random.Range(1, 4);
+        int RNG = Random.Range(1, 5);
 
         //From the RNG, set the waypoints and the name of the planet
         if (RNG == 1)
@@ -33,10 +34,15 @@ public class EnemyDriller : MonoBehaviour
             Wpoints = GameObject.FindGameObjectWithTag("WayPointRed").GetComponent<Waypoints>();
             planetName = "redPlanet";
         }
-        else
+        else if (RNG == 3)
         {
             Wpoints = GameObject.FindGameObjectWithTag("WayPointEarth").GetComponent<Waypoints>();
             planetName = "earth";
+        }
+        else
+        {
+            Wpoints = GameObject.FindGameObjectWithTag("WayPointOrange").GetComponent<Waypoints>();
+            planetName = "orangePlanet";
         }
 
         planet = GameObject.Find(planetName);
@@ -58,19 +64,30 @@ public class EnemyDriller : MonoBehaviour
 
         if (Vector2.Distance(transform.position, Wpoints.waypoints[waypointIndex].position) < 0.1f)
         {
-            if (waypointIndex < Wpoints.waypoints.Length - 1)
+            if (stop)
             {
-                waypointIndex++;
-            }
-            else
-            {
-                if (finishedAnimation == false) {
-                    anim.SetBool("isFlying", false);
-                    StartCoroutine(waitForAnimation());
+                int random = Random.Range(1, 10);
+
+                for (int i = 0; i < random; i++)
+                {
+                    waypointIndex++;
+
                 }
-                DamageDealer();
-                //Make the enemy do something after the planet is gone
+                stop = false;
             }
+            
+            DamageDealer();
+            if (finishedAnimation == false)
+            {
+                anim.SetBool("isFlying", false);
+                StartCoroutine(waitForAnimation());
+            }
+
+            if (pHP.getHealth() <= 0)
+            {
+                Destroy(gameObject);
+            }
+            
         }
     }
 

@@ -13,6 +13,7 @@ TagManager:
   - WayPointRed
   - WayPointEarth
   - Enemy
+  - WayPointOrange
   layers:
   - Default
   - TransparentFX
