@@ -5,9 +5,9 @@ using UnityEngine;
 public class SoundScript : MonoBehaviour
 {
 
-    public static AudioClip playerDeath, playerShoot, playerHurt, 
-                            playerJump, playerShield, enemyShoot, 
-                            enemyDeath;
+    public static AudioClip playerDeath, playerShootSingle, playerShootBig,
+                            playerHurt, playerJump, playerShield,
+                            playerShootTriple, enemyShoot,  enemyDeath;
 
     static AudioSource audioSrc;
 
@@ -17,7 +17,9 @@ public class SoundScript : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
 
         playerDeath = Resources.Load<AudioClip>("player_explode");
-        playerShoot = Resources.Load<AudioClip>("Player_shoot");
+        playerShootSingle = Resources.Load<AudioClip>("player_shoot_single");
+        playerShootTriple = Resources.Load<AudioClip>("player_shoot_triple");
+        playerShootBig = Resources.Load<AudioClip>("Player_shoot_big");
         playerHurt = Resources.Load<AudioClip>("Player_hurt");
         playerJump = Resources.Load<AudioClip>("player_jump");
         playerShield = Resources.Load<AudioClip>("player_shield");
@@ -42,8 +44,14 @@ public class SoundScript : MonoBehaviour
             case "player_explode":
                  audioSrc.PlayOneShot(playerDeath);
                     break;
-            case "player_shoot" :
-                audioSrc.PlayOneShot(playerShoot);
+            case "player_shoot_triple":
+                audioSrc.PlayOneShot(playerShootTriple);
+                break;
+            case "player_shoot_big" :
+                audioSrc.PlayOneShot(playerShootBig);
+                break;
+            case "player_shoot_single":
+                audioSrc.PlayOneShot(playerShootSingle);
                 break;
             case "player_hurt" :
                 audioSrc.PlayOneShot(playerHurt);

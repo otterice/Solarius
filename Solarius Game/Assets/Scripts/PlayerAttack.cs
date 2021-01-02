@@ -41,7 +41,6 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetKeyDown("f")) {
             Shoot();
             TriShot();
-            SoundScript.PlaySound("player_shoot");
 
         }
     }
@@ -53,8 +52,10 @@ public class PlayerAttack : MonoBehaviour
         GameObject newBullet;
         if (!powerups.redPlanetState) {
             newBullet = Instantiate(pBulletPrefab, transform.position, transform.rotation);
+            SoundScript.PlaySound("player_shoot_single");
         }
         else {
+            SoundScript.PlaySound("player_shoot_big");
             newBullet = Instantiate(pBiggerBulletPrefab, transform.position, transform.rotation);
         }
 
@@ -78,6 +79,7 @@ public class PlayerAttack : MonoBehaviour
         if (powerups.purplePlanetState) {
             GameObject newBullet2 = Instantiate(pBulletPrefab, transform.position, transform.rotation);
             GameObject newBullet3 = Instantiate(pBulletPrefab, transform.position, transform.rotation);
+            SoundScript.PlaySound("player_shoot_triple");
 
 
             if (p.lookingLeft) {
