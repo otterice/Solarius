@@ -20,6 +20,6 @@ public class ScoreCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score: " + gameSession.GetScore().ToString();
+        score.text = gameSession.GetScore().ToString();
     }
 }

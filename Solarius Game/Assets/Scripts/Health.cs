@@ -36,6 +36,7 @@ public class Health : MonoBehaviour
         SoundScript.PlaySound("player_hurt");
         d.Hit();
         if (health <= 0) {
+            FindObjectOfType<Level>().LoadGameOver();
             SoundScript.PlaySound("player_explode");
             Destroy(gameObject);
             GameObject death = Instantiate(prefabVFX, transform.position, transform.rotation);
