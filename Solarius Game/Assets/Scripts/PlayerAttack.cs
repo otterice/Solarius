@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
-{
-    playerStates p; 
+public class PlayerAttack : MonoBehaviour {
+    playerStates p;
 
     public GameObject pBulletPrefab;
     public GameObject pBiggerBulletPrefab;
@@ -14,41 +13,39 @@ public class PlayerAttack : MonoBehaviour
     private GameObject player;
     private Powerups powerups;
 
-    public SpriteRenderer sr; 
+    public SpriteRenderer sr;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         //Gets player states
         p = GetComponent<playerStates>();
         leftFace = GameObject.Find("LeftFacing");
         rightFace = GameObject.Find("RightFacing");
+
         p.lookingLeft = false;
+
         player = GameObject.Find("Player");
         powerups = player.GetComponent<Powerups>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         if (Input.GetKeyDown("left")) {
             p.lookingLeft = true;
             sr.flipX = true;
         }
-        else if (Input.GetKeyDown("right")) { 
+        else if (Input.GetKeyDown("right")) {
             p.lookingLeft = false;
             sr.flipX = false;
         }
         if (Input.GetKeyDown("f")) {
             Shoot();
             TriShot();
-
         }
     }
 
 
     //Big red funny bullet
-    void Shoot()
-    {
+    void Shoot() {
         GameObject newBullet;
         if (!powerups.redPlanetState) {
             newBullet = Instantiate(pBulletPrefab, transform.position, transform.rotation);
@@ -59,19 +56,17 @@ public class PlayerAttack : MonoBehaviour
             newBullet = Instantiate(pBiggerBulletPrefab, transform.position, transform.rotation);
         }
 
-        if (p.lookingLeft)
-        {
+        if (p.lookingLeft) {
             //Finds the GameObject "RightFacing", under the parent of Player
             //Player has two gameObject children and gets the transform.position of them
             newBullet.transform.position = leftFace.transform.position;
             newBullet.transform.right = -1 * transform.right.normalized;
         }
-        else
-        {
+        else {
             newBullet.transform.position = rightFace.transform.position;
             newBullet.transform.right = transform.right.normalized;
         }
-        
+
     }
 
     //Hilarious triple shot
@@ -102,6 +97,6 @@ public class PlayerAttack : MonoBehaviour
                 newBullet3.transform.right = transform.right.normalized;
                 newBullet3.transform.rotation *= Quaternion.Euler(0, 0, -30);
             }
-        }         
+        }
     }
 }

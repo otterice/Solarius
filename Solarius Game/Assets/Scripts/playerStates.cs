@@ -6,4 +6,5 @@ public class playerStates : MonoBehaviour
 {
     public bool lookingLeft;
     public bool lookingRight;
+    public bool lookingUp;
 }

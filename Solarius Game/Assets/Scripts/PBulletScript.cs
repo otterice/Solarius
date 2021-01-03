@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PBulletScript : MonoBehaviour
-{
+public class PBulletScript : MonoBehaviour {
     public float speed = 20f;
     public Rigidbody2D PBBod;
 
@@ -11,13 +10,12 @@ public class PBulletScript : MonoBehaviour
     }
 
     //Calls every fixed framed
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         PBBod.velocity = transform.right * speed;
     }
- 
 
-  
+
+
 
     //private void OnTriggerStay2D(Collider2D hitCollision)
     //{

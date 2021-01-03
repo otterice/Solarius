@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jump = 3f;
+    [SerializeField] float speedMod = 5f;
 
     private bool isGrounded;
     private float horizontal;
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate() {
         if (powerups.orangePlanetState == true) {
-            body.AddForce(transform.right * horizontal * (moveSpeed + 3));
+            body.AddForce(transform.right * horizontal * (moveSpeed + speedMod));
             return;
         }
         body.AddForce(transform.right * horizontal * moveSpeed); //Mathf.clamp to not overshoot the character
