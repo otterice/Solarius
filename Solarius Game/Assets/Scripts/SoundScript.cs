@@ -7,7 +7,8 @@ public class SoundScript : MonoBehaviour
 
     public static AudioClip playerDeath, playerShootSingle, playerShootBig,
                             playerHurt, playerJump, playerShield,
-                            playerShootTriple, enemyShoot,  enemyDeath;
+                            playerShootTriple, enemyShoot, enemyDeath,
+                            enemyHurt;
 
     static AudioSource audioSrc;
 
@@ -27,7 +28,7 @@ public class SoundScript : MonoBehaviour
 
         enemyDeath = Resources.Load<AudioClip>("enemy_explode");
         enemyShoot = Resources.Load<AudioClip>("enemy_shoot");
-
+        enemyHurt = Resources.Load<AudioClip>("enemy_hurt");
     }
 
     // Update is called once per frame
@@ -67,6 +68,9 @@ public class SoundScript : MonoBehaviour
                 break;
             case "enemy_shoot":
                 audioSrc.PlayOneShot(enemyShoot);
+                break;
+            case "enemy_hurt":
+                audioSrc.PlayOneShot(enemyHurt);
                 break;
 
         }

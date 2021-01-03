@@ -32,6 +32,7 @@ public class EnemyHealth : MonoBehaviour
     {
         //Gets how much damage the collision is doing
         enemyHealth -= d.getDamage();
+        SoundScript.PlaySound("enemy_hurt");
         d.Hit();
         if (enemyHealth <= 0)
         {
