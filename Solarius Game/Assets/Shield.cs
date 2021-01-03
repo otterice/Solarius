@@ -1,60 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Shield : MonoBehaviour
+namespace Coffee.UIEffects
 {
-    [SerializeField] float time = 1f;
-
-    private CircleCollider2D cC2D;
-    private SpriteRenderer sr;
-    private Powerups powerups;
-    private GameObject player;
-
-    private bool notDamaged;
-
-
-    // Start is called before the first frame update
-    void Start()
+    public class Shield : MonoBehaviour
     {
-        sr = GetComponent<SpriteRenderer>();
-        cC2D = GetComponent<CircleCollider2D>();
-        player = GameObject.Find("Player");
-        powerups = player.GetComponent<Powerups>();
-        sr.enabled = false;
-        notDamaged = true;
-    }
+        [SerializeField] float time = 1f;
 
-    IEnumerator WaitTime() {
-        notDamaged = false;
-        cC2D.enabled = false;
-        sr.enabled = false;
-        yield return new WaitForSeconds(time);
-        cC2D.enabled = true;
-        sr.enabled = true;
-        notDamaged = true;
-    }
+        private CircleCollider2D cC2D;
+        private SpriteRenderer sr;
+        private Powerups powerups;
+        private GameObject player;
 
-    private void Update() {
-        if(powerups.earthState && notDamaged) {
-            cC2D.enabled = true;
-            sr.enabled = true;
+        private bool notDamaged;
+
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            sr = GetComponent<SpriteRenderer>();
+            cC2D = GetComponent<CircleCollider2D>();
+            player = GameObject.Find("Player");
+            powerups = player.GetComponent<Powerups>();
+            sr.enabled = false;
+            notDamaged = true;
         }
-        else {
+
+        IEnumerator WaitTime()
+        {
+            notDamaged = false;
             cC2D.enabled = false;
             sr.enabled = false;
+            yield return new WaitForSeconds(time);
+            cC2D.enabled = true;
+            sr.enabled = true;
+            notDamaged = true;
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (powerups.earthState && notDamaged) {
-            DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
-            if (!damageDealer) {
-                return;
+        private void Update()
+        {
+            if (powerups.earthState && notDamaged)
+            {
+                cC2D.enabled = true;
+                sr.enabled = true;
             }
-            damageDealer.Hit();
-            StartCoroutine(WaitTime());
+            else
+            {
+                cC2D.enabled = false;
+                sr.enabled = false;
+            }
         }
-       
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (powerups.earthState && notDamaged)
+            {
+                DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
+                if (!damageDealer)
+                {
+                    return;
+                }
+                damageDealer.Hit();
+                StartCoroutine(WaitTime());
+            }
+
+        }
     }
 }

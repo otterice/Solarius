@@ -1275,6 +1275,8 @@ GameObject:
   - component: {fileID: 813671393}
   - component: {fileID: 813671395}
   - component: {fileID: 813671394}
+  - component: {fileID: 813671396}
+  - component: {fileID: 813671397}
   m_Layer: 5
   m_Name: Speed POW
   m_TagString: Untagged
@@ -1339,6 +1341,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813671392}
   m_CullTransparentMesh: 1
+--- !u!114 &813671396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813671392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shine: 1
+  speed: {fileID: 813671392}
+  m_EffectFactor: 0.5
+  m_Width: 0.25
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 1
+    initialPlayDelay: 0
+    duration: 1
+    loop: 0
+    loopDelay: 0
+    updateMode: 0
+--- !u!114 &813671397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813671392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43de09150af39d42b92af60f52dc063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redPlanetState: 0
+  earthState: 0
+  purplePlanetState: 0
+  orangePlanetState: 0
+  effects: {fileID: 0}
 --- !u!1 &839649231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,6 +1431,8 @@ GameObject:
   - component: {fileID: 843931437}
   - component: {fileID: 843931439}
   - component: {fileID: 843931438}
+  - component: {fileID: 843931440}
+  - component: {fileID: 843931441}
   m_Layer: 5
   m_Name: Tri POW
   m_TagString: Untagged
@@ -1448,6 +1497,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843931436}
   m_CullTransparentMesh: 1
+--- !u!114 &843931440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843931436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shine: 1
+  speed: {fileID: 813671392}
+  m_EffectFactor: 0.5
+  m_Width: 0.25
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 1
+    initialPlayDelay: 0
+    duration: 1
+    loop: 0
+    loopDelay: 0
+    updateMode: 0
+--- !u!114 &843931441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843931436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43de09150af39d42b92af60f52dc063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redPlanetState: 0
+  earthState: 0
+  purplePlanetState: 0
+  orangePlanetState: 0
+  effects: {fileID: 0}
 --- !u!1 &854116627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,6 +1635,7 @@ GameObject:
   - component: {fileID: 856543465}
   - component: {fileID: 856543467}
   - component: {fileID: 856543466}
+  - component: {fileID: 856543468}
   m_Layer: 5
   m_Name: BigBullet POW
   m_TagString: Untagged
@@ -1564,7 +1659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -313, y: -164.36996}
+  m_AnchoredPosition: {x: -309.26, y: -164.36998}
   m_SizeDelta: {x: 51.26, y: 51.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &856543466
@@ -1605,6 +1700,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856543464}
   m_CullTransparentMesh: 1
+--- !u!114 &856543468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856543464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shine: 1
+  speed: {fileID: 813671392}
+  m_EffectFactor: 0.492
+  m_Width: 0.25
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 1
+    initialPlayDelay: 0
+    duration: 1
+    loop: 0
+    loopDelay: 0
+    updateMode: 0
 --- !u!1 &858442830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,7 +3612,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 980755743cd8f68479258f7586a1fb48, type: 3}
-    m_FontSize: 20
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -3595,6 +3718,8 @@ GameObject:
   - component: {fileID: 2126102984}
   - component: {fileID: 2126102986}
   - component: {fileID: 2126102985}
+  - component: {fileID: 2126102987}
+  - component: {fileID: 2126102988}
   m_Layer: 5
   m_Name: Shield POW
   m_TagString: Untagged
@@ -3634,7 +3759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3659,6 +3784,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126102983}
   m_CullTransparentMesh: 1
+--- !u!114 &2126102987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126102983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shine: 1
+  speed: {fileID: 813671392}
+  m_EffectFactor: 0.5
+  m_Width: 0.25
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 1
+    initialPlayDelay: 0
+    duration: 1
+    loop: 0
+    loopDelay: 0
+    updateMode: 0
+--- !u!114 &2126102988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126102983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43de09150af39d42b92af60f52dc063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redPlanetState: 0
+  earthState: 0
+  purplePlanetState: 0
+  orangePlanetState: 0
+  effects: {fileID: 0}
 --- !u!1001 &304521084639876906
 PrefabInstance:
   m_ObjectHideFlags: 0

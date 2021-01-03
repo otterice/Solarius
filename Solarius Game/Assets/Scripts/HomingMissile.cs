@@ -8,7 +8,7 @@ public class HomingMissile : MonoBehaviour
     public Transform target;
     public float speed = 5f;
     public float rotateSpeed = 200f;
-
+    
     public GameObject explosionVFX;
 
     private Rigidbody2D rb;

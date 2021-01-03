@@ -13,6 +13,8 @@ public class EnemyDetection : MonoBehaviour
 
     public float rotateSpeed = 200f;
 
+
+
     //Enemy bullet mechanics
     [SerializeField] float shotCounter, minTimeBetweenShots, maxTimeBetweenShots;
 
