@@ -8,16 +8,18 @@ public class ScoreCounter : MonoBehaviour
 
     public static int scoreValue = 0;
     Text score;
+    GameSession gameSession;
 
     // Start is called before the first frame update
     void Start()
     {
-        score = GetComponent<Text>();    
+        score = GetComponent<Text>();
+        gameSession = FindObjectOfType<GameSession>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score: " + scoreValue;
+        score.text = "Score: " + gameSession.GetScore().ToString();
     }
 }

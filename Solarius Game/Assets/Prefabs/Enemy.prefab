@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 150
   time: 0.05
+  scoreValue: 50
 --- !u!1 &3385488631810873454
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +317,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  endReachedDistance: 3
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0

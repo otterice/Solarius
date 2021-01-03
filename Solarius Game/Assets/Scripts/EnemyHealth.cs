@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] public int enemyHealth = 150;
     [SerializeField] float time = 0.05f;
+    [SerializeField] int scoreValue = 50;
     private Renderer sr;
     private IEnumerator coroutine;
 
@@ -38,15 +39,7 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(transform.parent.gameObject);
             SoundScript.PlaySound("enemy_explode");
-            if (transform.parent.gameObject.name == "Driller")
-            {
-                ScoreCounter.scoreValue += 25;
-            } 
-            else
-            {
-                ScoreCounter.scoreValue += 10;
-
-            }
+            FindObjectOfType<GameSession>().AddToScore(scoreValue);
         }
         StartCoroutine(flash());
     }
