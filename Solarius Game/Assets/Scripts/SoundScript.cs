@@ -17,6 +17,7 @@ public class SoundScript : MonoBehaviour
     {
         audioSrc = GetComponent<AudioSource>();
 
+        //MUST USE RESOURCES FOLDER TO LOAD AUDIO SOURCES
         playerDeath = Resources.Load<AudioClip>("player_explode");
         playerShootSingle = Resources.Load<AudioClip>("player_shoot_single");
         playerShootTriple = Resources.Load<AudioClip>("player_shoot_triple");
