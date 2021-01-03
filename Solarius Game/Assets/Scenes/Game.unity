@@ -1365,6 +1365,7 @@ GameObject:
   - component: {fileID: 813671393}
   - component: {fileID: 813671395}
   - component: {fileID: 813671394}
+  - component: {fileID: 813671396}
   m_Layer: 5
   m_Name: Speed POW
   m_TagString: Untagged
@@ -1429,6 +1430,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813671392}
   m_CullTransparentMesh: 1
+--- !u!114 &813671396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813671392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shine: 0
+  speed: {fileID: 813671392}
+  triBullet: {fileID: 843931436}
+  bigBullet: {fileID: 856543464}
+  shield: {fileID: 2126102983}
+  m_EffectFactor: 0.195
+  m_Width: 0.25
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 0
+    initialPlayDelay: 0
+    duration: 1
+    loop: 0
+    loopDelay: 0
+    updateMode: 0
 --- !u!1 &839649231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,6 +1506,7 @@ GameObject:
   - component: {fileID: 843931437}
   - component: {fileID: 843931439}
   - component: {fileID: 843931438}
+  - component: {fileID: 843931440}
   m_Layer: 5
   m_Name: Tri POW
   m_TagString: Untagged
@@ -1538,6 +1571,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843931436}
   m_CullTransparentMesh: 1
+--- !u!114 &843931440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843931436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shine: 0
+  speed: {fileID: 813671392}
+  triBullet: {fileID: 843931436}
+  bigBullet: {fileID: 856543464}
+  shield: {fileID: 2126102983}
+  m_EffectFactor: 0.195
+  m_Width: 0.25
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 0
+    initialPlayDelay: 0
+    duration: 1
+    loop: 0
+    loopDelay: 0
+    updateMode: 0
 --- !u!1 &854116627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,6 +1695,7 @@ GameObject:
   - component: {fileID: 856543465}
   - component: {fileID: 856543467}
   - component: {fileID: 856543466}
+  - component: {fileID: 856543468}
   m_Layer: 5
   m_Name: BigBullet POW
   m_TagString: Untagged
@@ -1695,6 +1760,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856543464}
   m_CullTransparentMesh: 1
+--- !u!114 &856543468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856543464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shine: 0
+  speed: {fileID: 813671392}
+  triBullet: {fileID: 843931436}
+  bigBullet: {fileID: 856543464}
+  shield: {fileID: 2126102983}
+  m_EffectFactor: 0.195
+  m_Width: 0.25
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 0
+    initialPlayDelay: 0
+    duration: 1
+    loop: 0
+    loopDelay: 0
+    updateMode: 0
 --- !u!1 &858442830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3792,6 +3888,7 @@ GameObject:
   - component: {fileID: 2126102984}
   - component: {fileID: 2126102986}
   - component: {fileID: 2126102985}
+  - component: {fileID: 2126102987}
   m_Layer: 5
   m_Name: Shield POW
   m_TagString: Untagged
@@ -3856,6 +3953,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126102983}
   m_CullTransparentMesh: 1
+--- !u!114 &2126102987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126102983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19b7e2285c104f6ca47d583f3e5444f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shine: 0
+  speed: {fileID: 813671392}
+  triBullet: {fileID: 843931436}
+  bigBullet: {fileID: 856543464}
+  shield: {fileID: 2126102983}
+  m_EffectFactor: 0.195
+  m_Width: 0.25
+  m_Rotation: 135
+  m_Softness: 1
+  m_Brightness: 1
+  m_Gloss: 1
+  m_EffectArea: 0
+  m_Player:
+    play: 0
+    initialPlayDelay: 0
+    duration: 1
+    loop: 0
+    loopDelay: 0
+    updateMode: 0
 --- !u!1001 &304521084639876906
 PrefabInstance:
   m_ObjectHideFlags: 0
