@@ -1,3 +1,3 @@
 # Solarius
 
-Game for the GameJam
+Game for the DevsSquad Academy GameJam
