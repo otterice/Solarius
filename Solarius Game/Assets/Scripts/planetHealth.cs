@@ -47,6 +47,15 @@ namespace Coffee.UIEffects
             }
         }
 
+
+        public void doOnDeath()
+        {
+            FindObjectOfType<Level>().LoadGameOver();
+            SoundScript.PlaySound("player_explode");
+            Destroy(gameObject);
+            
+        }
+
         public void TakeDamage(float amount)
         {
             health -= amount;
@@ -57,6 +66,13 @@ namespace Coffee.UIEffects
         private void OnDestroy()
         {
             powerups.setPlanetisDestroyed(planetName);
+
+            if(!powerups.redPlanetState && !powerups.purplePlanetState
+                && !powerups.earthState && !powerups.earthState)
+            {
+                doOnDeath();
+            }
+
         }
     }
 
