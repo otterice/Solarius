@@ -6,6 +6,7 @@ namespace Coffee.UIEffects
     public class planetHealth : MonoBehaviour
     {
         Powerups powerups;
+        Health hp;
         GameObject player;
 
         private string planetName;
@@ -20,6 +21,7 @@ namespace Coffee.UIEffects
             planetBarName = planetBar.name;
             bar = GameObject.Find(planetBarName).GetComponent<PlanetHealthBar>();
             player = GameObject.Find("Player");
+            hp = player.GetComponent<Health>();
             powerups = player.GetComponent<Powerups>();
             planetName = gameObject.name;
         }
@@ -48,13 +50,13 @@ namespace Coffee.UIEffects
         }
 
 
-        public void doOnDeath()
-        {
-            FindObjectOfType<Level>().LoadGameOver();
-            SoundScript.PlaySound("player_explode");
-            Destroy(gameObject);
+        //public void doOnDeath()
+        //{
+        //    FindObjectOfType<Level>().LoadGameOver();
+        //    //SoundScript.PlaySound("player_explode");
+        //    Destroy(gameObject);
             
-        }
+        //}
 
         public void TakeDamage(float amount)
         {
@@ -66,11 +68,14 @@ namespace Coffee.UIEffects
         private void OnDestroy()
         {
             powerups.setPlanetisDestroyed(planetName);
+            SoundScript.PlaySound("player_explode");
 
-            if(!powerups.redPlanetState && !powerups.purplePlanetState
+            if (!powerups.redPlanetState && !powerups.purplePlanetState
                 && !powerups.earthState && !powerups.earthState)
             {
-                doOnDeath();
+                //call player death as well
+                hp.deathVisualizer();
+                FindObjectOfType<Level>().LoadGameOver();
             }
 
         }

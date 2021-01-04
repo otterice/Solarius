@@ -10,6 +10,11 @@ namespace Coffee.UIEffects
         public bool earthState;
         public bool purplePlanetState;
         public bool orangePlanetState;
+
+        public bool redPlanetisDestroyed;
+        public bool earthisDestroyed;
+        public bool purplePlanetisDestroyed;
+        public bool orangePlanetisDestroyed;
         public UIShiny effects;
 
         // Start is called before the first frame update
@@ -20,6 +25,11 @@ namespace Coffee.UIEffects
             earthState = false;
             purplePlanetState = false;
             orangePlanetState = false;
+
+            redPlanetisDestroyed = false;
+            earthisDestroyed = false;
+            purplePlanetisDestroyed = false;
+            orangePlanetisDestroyed = false;
         }
 
 
@@ -36,9 +46,6 @@ namespace Coffee.UIEffects
             {
                 resetStates();
                 redPlanetState = true;
-                Debug.Log("red");
-                effects.Play(false);
-
             }
             else if (collision.gameObject.name == "earth")
             {
@@ -63,18 +70,22 @@ namespace Coffee.UIEffects
             if (planetName == "purplePlanet")
             {
                 purplePlanetState = false;
+                purplePlanetisDestroyed = true;
             }
             else if (planetName == "redPlanet")
             {
                 redPlanetState = false;
+                redPlanetisDestroyed = true;
             }
             else if (planetName == "earth")
             {
                 earthState = false;
+                earthisDestroyed = true;
             }
             else if (planetName == "orangePlanet")
             {
                 orangePlanetState = false;
+                orangePlanetisDestroyed = true;
             }
         }
     }

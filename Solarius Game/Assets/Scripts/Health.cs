@@ -43,6 +43,10 @@ public class Health : MonoBehaviour
 
     public void doOnDeath() {
         FindObjectOfType<Level>().LoadGameOver();
+        deathVisualizer();
+    }
+
+    public void deathVisualizer() {
         SoundScript.PlaySound("player_explode");
         Destroy(gameObject);
         GameObject death = Instantiate(prefabVFX, transform.position, transform.rotation);

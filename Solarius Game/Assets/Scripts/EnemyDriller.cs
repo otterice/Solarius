@@ -16,31 +16,33 @@ namespace Coffee.UIEffects
 
         GameObject planet;
         planetHealth pHP;
+        Powerups powerups;
 
         void Start()
         {
             anim = GetComponent<Animator>();
+            powerups = GameObject.Find("Player").GetComponent<Powerups>();
             finishedAnimation = false;
 
             int RNG = Random.Range(1, 5);
 
             //From the RNG, set the waypoints and the name of the planet
-            if (RNG == 1)
+            if (RNG == 1 && !powerups.purplePlanetisDestroyed)
             {
                 Wpoints = GameObject.FindGameObjectWithTag("WayPointPurple").GetComponent<Waypoints>();
                 planetName = "purplePlanet";
             }
-            else if (RNG == 2)
+            else if (RNG == 2 && !powerups.redPlanetisDestroyed)
             {
                 Wpoints = GameObject.FindGameObjectWithTag("WayPointRed").GetComponent<Waypoints>();
                 planetName = "redPlanet";
             }
-            else if (RNG == 3)
+            else if (RNG == 3 && !powerups.earthisDestroyed)
             {
                 Wpoints = GameObject.FindGameObjectWithTag("WayPointEarth").GetComponent<Waypoints>();
                 planetName = "earth";
             }
-            else
+            else if (RNG == 4 && !powerups.orangePlanetisDestroyed)
             {
                 Wpoints = GameObject.FindGameObjectWithTag("WayPointOrange").GetComponent<Waypoints>();
                 planetName = "orangePlanet";
