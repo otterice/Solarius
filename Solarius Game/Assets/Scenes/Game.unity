@@ -5644,7 +5644,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 409727317, guid: b65b5c88f0fb64741b0b9f8ef6bde87c, type: 3}
       propertyPath: health
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 409727317, guid: b65b5c88f0fb64741b0b9f8ef6bde87c, type: 3}
       propertyPath: planetBar
@@ -5733,7 +5733,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2078352441, guid: ef2473c2ac3fb294d9796092b77e36ff, type: 3}
       propertyPath: health
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2078352441, guid: ef2473c2ac3fb294d9796092b77e36ff, type: 3}
       propertyPath: planetBar
@@ -5977,7 +5977,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 210123667964989568, guid: ecbee655f027d784fa9f4a4642411888, type: 3}
       propertyPath: health
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 210123667964989568, guid: ecbee655f027d784fa9f4a4642411888, type: 3}
       propertyPath: planetBar
@@ -6127,7 +6127,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1030283422, guid: 643ee4571631b7b48903e0b85c866479, type: 3}
       propertyPath: health
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1030283422, guid: 643ee4571631b7b48903e0b85c866479, type: 3}
       propertyPath: planetBar
