@@ -5,6 +5,7 @@ namespace Coffee.UIEffects
 {
     public class planetHealth : MonoBehaviour
     {
+        [SerializeField] GameObject prefabVFX;
         Powerups powerups;
         Health hp;
         GameObject player;
@@ -69,6 +70,7 @@ namespace Coffee.UIEffects
         {
             powerups.setPlanetisDestroyed(planetName);
             SoundScript.PlaySound("planet_explode");
+            GameObject death = Instantiate(prefabVFX, transform.position, transform.rotation);
 
             if (powerups.redPlanetisDestroyed && powerups.purplePlanetisDestroyed
                 && powerups.earthisDestroyed && powerups.orangePlanetisDestroyed)
