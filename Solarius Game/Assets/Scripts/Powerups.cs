@@ -26,10 +26,10 @@ namespace Coffee.UIEffects
             purplePlanetState = false;
             orangePlanetState = false;
 
-            redPlanetisDestroyed = false;
-            earthisDestroyed = false;
-            purplePlanetisDestroyed = false;
-            orangePlanetisDestroyed = false;
+            //redPlanetisDestroyed = false;
+            //earthisDestroyed = false;
+            //purplePlanetisDestroyed = false;
+            //orangePlanetisDestroyed = false;
         }
 
 
@@ -66,7 +66,7 @@ namespace Coffee.UIEffects
         }
 
         public void setPlanetisDestroyed(string planetName)
-        {
+        {   
             if (planetName == "purplePlanet")
             {
                 purplePlanetState = false;

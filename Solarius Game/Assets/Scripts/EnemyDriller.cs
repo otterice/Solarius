@@ -25,7 +25,7 @@ namespace Coffee.UIEffects
             finishedAnimation = false;
 
             int RNG = Random.Range(1, 5);
-
+            
             //From the RNG, set the waypoints and the name of the planet
             if (RNG == 1 && !powerups.purplePlanetisDestroyed)
             {
@@ -46,6 +46,10 @@ namespace Coffee.UIEffects
             {
                 Wpoints = GameObject.FindGameObjectWithTag("WayPointOrange").GetComponent<Waypoints>();
                 planetName = "orangePlanet";
+            }
+            else
+            {
+                Start();
             }
 
             planet = GameObject.Find(planetName);

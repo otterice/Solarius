@@ -68,10 +68,10 @@ namespace Coffee.UIEffects
         private void OnDestroy()
         {
             powerups.setPlanetisDestroyed(planetName);
-            SoundScript.PlaySound("player_explode");
+            SoundScript.PlaySound("planet_explode");
 
-            if (!powerups.redPlanetState && !powerups.purplePlanetState
-                && !powerups.earthState && !powerups.earthState)
+            if (powerups.redPlanetisDestroyed && powerups.purplePlanetisDestroyed
+                && powerups.earthisDestroyed && powerups.orangePlanetisDestroyed)
             {
                 //call player death as well
                 hp.deathVisualizer();
