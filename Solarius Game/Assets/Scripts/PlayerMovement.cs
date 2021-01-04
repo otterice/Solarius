@@ -35,7 +35,6 @@ namespace Coffee.UIEffects
             {
                 body.AddForce(transform.up * jump, ForceMode2D.Impulse);
                 SoundScript.PlaySound("player_jump");
-                Debug.Log("jump");
             }
         }
 
