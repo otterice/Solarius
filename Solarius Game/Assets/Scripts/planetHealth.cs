@@ -9,11 +9,16 @@ namespace Coffee.UIEffects
         GameObject player;
 
         private string planetName;
+        private string planetBarName;
+        [SerializeField] public float health = 100f;
+        public PlanetHealthBar bar;
+        public GameObject planetBar;
 
-        [SerializeField] float health = 100f;
         // Start is called before the first frame update
         void Start()
         {
+            planetBarName = planetBar.name;
+            bar = GameObject.Find(planetBarName).GetComponent<PlanetHealthBar>();
             player = GameObject.Find("Player");
             powerups = player.GetComponent<Powerups>();
             planetName = gameObject.name;
@@ -45,6 +50,8 @@ namespace Coffee.UIEffects
         public void TakeDamage(float amount)
         {
             health -= amount;
+
+            bar.SetHealth(health);
         }
 
         private void OnDestroy()
