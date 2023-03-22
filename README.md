@@ -1,5 +1,7 @@
 # Solarius
 
+![image text](https://img.itch.zone/aW1nLzQ5MTYxNjgucG5n/315x250%23c/Z%2BBzJv.png)
+
 Link to the game:
 https://itch.io/jam/devsquad-2020/rate/874114
 
